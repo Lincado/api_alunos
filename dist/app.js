@@ -2,6 +2,11 @@
 
 require('./database');
 
+var _dotenv = require('dotenv'); var _dotenv2 = _interopRequireDefault(_dotenv);
+
+_dotenv2.default.config();
+
+
 var _express = require('express'); var _express2 = _interopRequireDefault(_express);
 var _cors = require('cors'); var _cors2 = _interopRequireDefault(_cors);
 var _helmet = require('helmet'); var _helmet2 = _interopRequireDefault(_helmet);
@@ -13,9 +18,10 @@ var _alunoRoutes = require('./routes/alunoRoutes'); var _alunoRoutes2 = _interop
 var _fotoRoutes = require('./routes/fotoRoutes'); var _fotoRoutes2 = _interopRequireDefault(_fotoRoutes);
 
 const whiteList = [
-  'https://react1.otaviomiranda.com.br',
-  'https://react2.otaviomiranda.com.br',
   'http://localhost:3000',
+  'http://localhost:3001',
+  'http://localhost:5173',
+  'http://localhost:5174',
 ];
 
 const corsOptions = {

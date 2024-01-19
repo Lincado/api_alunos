@@ -2,6 +2,11 @@ import { resolve } from 'path';
 
 import './database';
 
+import dotenv from 'dotenv';
+
+dotenv.config();
+
+
 import express from 'express';
 import cors from 'cors';
 import helmet from 'helmet';
@@ -13,9 +18,10 @@ import alunoRoutes from './routes/alunoRoutes';
 import fotoRoutes from './routes/fotoRoutes';
 
 const whiteList = [
-  'https://react1.otaviomiranda.com.br',
-  'https://react2.otaviomiranda.com.br',
   'http://localhost:3000',
+  'http://localhost:3001',
+  'http://localhost:5173',
+  'http://localhost:5174',
 ];
 
 const corsOptions = {

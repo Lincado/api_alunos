@@ -7,13 +7,13 @@ const upload = _multer2.default.call(void 0, _multerConfig2.default).single('fot
 
 class FotoController {
   store(req, res) {
+    
     return upload(req, res, async (error) => {
       if (error) {
         return res.status(400).json({
           errors: [error.code],
         });
       }
-
       try {
         const { originalname, filename } = req.file;
         const { aluno_id } = req.body;

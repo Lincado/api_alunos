@@ -1,5 +1,7 @@
+'use strict';
+
 module.exports = {
-  up: (queryInterface, Sequelize) => queryInterface.changeColumn(
+  up: async (queryInterface, Sequelize) =>  queryInterface.changeColumn(
     'alunos',
     'email',
     {
@@ -9,5 +11,6 @@ module.exports = {
     },
   ),
 
-  down: () => {},
+  down: async (queryInterface, Sequelize) => {
+    }
 };
