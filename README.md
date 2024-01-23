@@ -4,6 +4,12 @@ Para subir o projeto no ar com SQLite, copie o arquivo `.env_example` para `.env
 
 Você também precisará adicionar uma secret key no arquivo `.env`:
 
+Criar migrates
+
+```
+npx sequelize-cli migration:generate --name
+```
+
 ```
 TOKEN_SECRET='sua_secret_key_aqui'
 ```
