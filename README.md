@@ -7,7 +7,7 @@ Você também precisará adicionar uma secret key no arquivo `.env`:
 Criar migrates
 
 ```
-npx sequelize-cli migration:generate --name
+npx sequelize-cli migration:generate --name "nome_da_tabela"
 ```
 
 ```
