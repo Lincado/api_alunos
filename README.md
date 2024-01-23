@@ -4,6 +4,14 @@ Para subir o projeto no ar com SQLite, copie o arquivo `.env_example` para `.env
 
 Você também precisará adicionar uma secret key no arquivo `.env`:
 
+Criar BD pra executar localmente
+
+```
+docker run --restart always -d --name NOME_DO_BD -p 3306:3306 `
+    -e MYSQL_ROOT_PASSWORD=sua_senha_forte mariadb
+```
+
+
 Criar migrates
 
 ```
